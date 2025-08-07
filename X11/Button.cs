@@ -136,6 +136,9 @@ namespace X11
 
         [DllImport("libX11.so.6")]
         public static extern void XDisplayKeycodes(IntPtr display, IntPtr min, IntPtr max);
+
+        [DllImport("libX11.so.6")]
+        public static extern int XWarpPointer(IntPtr display, Window src_w, Window dest_w, int src_x, int src_y, uint src_width, uint src_height, int dest_x, int dest_y);
     }
 
 
